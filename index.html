@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Weather App</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+    
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-bg">
+      <main class="weather-card">
+        <form class="search-form">
+          <input type="text" id="name" autocomplete="off" placeholder="Enter city name...">
+          <button type="submit" title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <section class="result">
+          <figure class="name">
+            <figcaption id="city-name">London</figcaption>
+            <img id="country-flag" src="https://flagsapi.com/GB/shiny/32.png" alt="Country Flag">
+          </figure>
+          <figure class="temperature">
+            <img id="weather-icon" src="https://openweathermap.org/img/wn/10d@4x.png" alt="Weather Icon">
+            <figcaption>
+              <span id="temp-value">31</span>
+              <sup>o</sup>C
+            </figcaption>
+          </figure>
+          <p class="description" id="weather-desc">Overcast clouds</p>
+          <ul class="weather-details">
+            <li>
+              <span>Clouds</span>
+              <i class="fa-solid fa-cloud"></i>
+              <span id="clouds">98</span>%
+            </li>
+            <li>
+              <span>Humidity</span>
+              <i class="fa-solid fa-droplet"></i>
+              <span id="humidity">98</span>%
+            </li>
+            <li>
+              <span>Pressure</span>
+              <i class="fa-solid fa-gauge"></i>
+              <span id="pressure">1011</span> hPa
+            </li>
+            <li>
+              <span>Wind</span>
+              <i class="fa-solid fa-wind"></i>
+              <span id="wind-speed">5.1</span> m/s
+            </li>
+          </ul>
+        </section>
+        <section class="world-time">
+          <h2>Local Time</h2>
+          <div id="world-time-value"></div>
+        </section>
+      </main>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
